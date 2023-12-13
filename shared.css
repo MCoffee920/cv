@@ -1,0 +1,267 @@
+/* Everything except the rules in the media queries are for mobile view. */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	height: 100vh;
+	font-size: 1rem;
+	font-family: "Fira Sans", sans-serif;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	min-height: 100vh;
+	background-color: #d58bb7;
+	display: grid;
+	grid-template-rows: 3.5rem auto fit-content(8rem);
+	grid-template-areas:
+		"header"
+		"main"
+		"footer";
+}
+
+.backdrop {
+	display: none;
+	position: absolute;
+	opacity: 0;
+	transition: opacity 0.2s linear;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.7);
+}
+
+.main-header {
+	width: 100%;
+	position: sticky;
+	top: 0;
+	left: 4%;
+	margin: 0 auto;
+	background: #b897de;
+	padding: 0.5rem 1rem;
+	z-index: 60;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border: 1px #f0e6ef solid;
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	grid-area: header;
+}
+
+.logo {
+	color: #f0e6ef;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.logo img {
+	height: 3rem;
+	vertical-align: middle;
+}
+
+/* don't want this to display because should show the mobile menu */
+.main-nav {
+	display: none;
+}
+
+.main-nav__items {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+}
+
+.main-nav__item {
+	margin: 0 1rem;
+}
+
+.main-nav__item a,
+.mobile-nav__item a {
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+	padding: 0.2rem 0;
+}
+
+.main-nav__item a:hover,
+.main-nav__item a:active {
+	color: white;
+	border-bottom: 5px solid white;
+}
+
+.main-nav__item--cta button,
+.mobile-nav__item--cta button {
+	color: black;
+	background: #f7d3c4;
+	font-family: Fira Sans;
+	font-size: 1rem;
+	font-weight: bold;
+	padding: 0.5rem 1rem;
+	border-radius: 8px;
+}
+
+.main-nav__item--cta button:hover,
+.main-nav__item--cta button:active,
+.mobile-nav__item--cta button:hover,
+.mobile-nav__item--cta button:active {
+	color: black;
+	background: white;
+	border: none;
+}
+
+.mobile-nav {
+	display: none;
+	position: fixed;
+	z-index: 101;
+	width: 55%;
+	/* top: 40px; */
+	left: 0;
+	background-image: radial-gradient(ellipse at center, rgba(167, 84, 214, 0.9) 0%, rgba(230, 88, 194, 0.9));
+	height: 100vh;
+	transform: translateX(3rem);
+	transition: opacity 500ms ease-in, transform 500ms ease-in;
+}
+
+.mobile-nav__items {
+	width: 90%;
+	height: 100%;
+	list-style: none;
+	margin: 0 auto;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.mobile-nav__item {
+	margin: 1rem 0;
+}
+
+.mobile-nav__item a,
+.mobile-nav__item button {
+	font-size: 1.5rem;
+}
+
+.hamburger-icon {
+	width: 3rem;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	margin: 20px;
+	vertical-align: middle;
+}
+
+.hamburger-icon:focus {
+	outline: none;
+}
+
+.hamburger-icon__bar {
+	width: 100%;
+	height: 0.2rem;
+	background: black;
+	display: block;
+	margin: 0.6rem 0;
+}
+
+main {
+	grid-area: main;
+}
+
+.main-footer {
+	font-size: 1rem;
+	position: relative;
+	height: 105px;
+	background: #b897de;
+	padding: 1rem;
+	text-align: center;
+	border-top: #f0e6ef 1px solid;
+	grid-area: footer;
+}
+
+.main-footer__links {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.main-footer__link {
+	margin: 0.5rem 0;
+}
+
+.main-footer__link a {
+	color: black;
+	text-decoration: none;
+}
+
+.main-footer__link a:hover,
+.main-footer__link a:active {
+	color: #ccc;
+}
+
+.open {
+	display: block !important;
+	opacity: 1 !important;
+	transform: translateY(0) !important;
+}
+
+/* for desktop view */
+@media (min-width: 68rem) {
+	.main-header {
+		width: 90%;
+		border: 1px #f0e6ef solid;
+		border-top: 0px;
+		border-radius: 0 0 15px 15px;
+	}
+
+	.main-nav__items {
+		align-items: center;
+	}
+
+	.main-nav__item--cta button:hover {
+		cursor: pointer;
+	}
+
+	.hamburger-icon {
+		display: none;
+	}
+
+	.main-nav {
+		display: flex;
+	}
+
+	.main-footer {
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.main-footer__link {
+		margin: 0 1rem;
+	}
+
+	.main-footer__links {
+		flex-direction: row;
+		justify-content: center;
+	}
+}

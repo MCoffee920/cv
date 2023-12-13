@@ -1,0 +1,67 @@
+/* Everything except the rules in the media queries are for mobile view. */
+
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.main-title {
+	color: #f0e6ef;
+	text-align: center;
+	font-size: 25px;
+	margin: 0;
+	margin-top: 15px;
+}
+
+.main-description {
+	text-align: center;
+	font-size: 1rem;
+	line-height: 1.5;
+	margin: 0 40px;
+}
+
+.main-image {
+	background-image: url(images/275-simpleOfficeDesk.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 270px;
+	border-radius: 100px;
+}
+
+/* For tablet view */
+@media screen and (max-width: 68rem) and (min-width: 40rem) {
+	.main-image {
+		background-image: url(images/630-simpleOfficeDesk.png);
+		height: 635px;
+	}
+}
+
+/* For desktop view */
+@media (min-width: 68rem) {
+	main {
+		align-items: center;
+	}
+
+	.main-title {
+		color: #f0e6ef;
+		text-align: center;
+		font-size: 50px;
+		margin: 0;
+		margin-top: 70px;
+	}
+
+	.main-description {
+		text-align: center;
+		font-size: 1.5rem;
+		line-height: 1.2;
+		padding: 0;
+		max-width: 75rem;
+	}
+
+	.main-image {
+		background-image: url(images/simpleOfficeDesk.png);
+		height: 890px;
+		width: 90%;
+	}
+}

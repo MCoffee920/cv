@@ -1,0 +1,61 @@
+/* Everything except the rules in the media queries are for mobile view. */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.my-works-title {
+    color: #f0e6ef;
+    text-align: center;
+    font-size: 25px;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.my-works-wallaru-image {
+    background-image: url(../images/900w-Background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    margin: 1rem;
+    height: 13rem;
+    width: 90%;
+}
+
+.my-works-wallaru-description {
+    text-align: center;
+    width: 90%;
+    margin: 1rem;
+    max-width: 63rem;
+    font-size: 1.5rem;
+}
+
+/* For tablet view */
+@media screen and (max-width: 68rem) and (min-width: 40rem) {
+    .my-works-wallaru-image {
+        background-image: url(../images/900w-Background.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        text-align: center;
+        margin: 1rem;
+        height: 13rem;
+        width: 90%;
+    }
+
+}
+
+/* for desktop view */
+@media (min-width: 68rem) {
+    .my-works-wallaru-image {
+        background-image: url(../images/900w-Background.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        text-align: center;
+        margin: 1rem;
+        height: 13rem;
+        width: 90%;
+    }
+}

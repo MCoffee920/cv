@@ -1,0 +1,48 @@
+/* Everything except the rules in the media queries are for mobile view. */
+
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.about-image {
+	background-image: url(../images/280w-me-violin.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	text-align: center;
+	margin: 1rem;
+	height: 13rem;
+	width: 90%;
+}
+
+.about-description {
+	text-align: center;
+	width: 90%;
+	margin: 1rem;
+	max-width: 63rem;
+	font-size: 1.5rem;
+}
+
+/* For tablet view */
+@media screen and (max-width: 68rem) and (min-width: 40rem) {
+	.about-image {
+		background-image: url(../images/640w-me-violin.png);
+		height: 635px;
+	}
+
+}
+
+/* for desktop view */
+@media (min-width: 68rem) {
+	.about-image {
+		background-image: url(../images/900w-me-violin.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		text-align: center;
+		margin: 1rem;
+		height: 720px;
+		width: 90%;
+	}
+}
