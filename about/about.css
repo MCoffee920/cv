@@ -8,12 +8,12 @@ main {
 }
 
 .about-image {
-	background-image: url(../images/280w-me-violin.png);
+	background-image: url(../images/280w-Mars-violin.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	text-align: center;
 	margin: 1rem;
-	height: 13rem;
+	height: 12rem;
 	width: 90%;
 }
 
@@ -28,8 +28,8 @@ main {
 /* For tablet view */
 @media screen and (max-width: 68rem) and (min-width: 40rem) {
 	.about-image {
-		background-image: url(../images/640w-me-violin.png);
-		height: 635px;
+		background-image: url(../images/640w-Mars-violin.png);
+		height: 28rem;
 	}
 
 }
@@ -37,12 +37,12 @@ main {
 /* for desktop view */
 @media (min-width: 68rem) {
 	.about-image {
-		background-image: url(../images/900w-me-violin.png);
+		background-image: url(../images/900w-Mars-violin.png);
 		background-repeat: no-repeat;
 		background-position: center;
 		text-align: center;
 		margin: 1rem;
-		height: 720px;
+		height: 38rem;
 		width: 90%;
 	}
 }
