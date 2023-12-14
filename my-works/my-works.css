@@ -1,61 +1,202 @@
 /* Everything except the rules in the media queries are for mobile view. */
 
 main {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
 }
 
 .my-works-title {
-    color: #f0e6ef;
-    text-align: center;
-    font-size: 25px;
-    margin: 0;
-    margin-top: 20px;
+	color: #f0e6ef;
+	text-align: center;
+	font-size: 25px;
+	margin: 0;
+	margin-top: 20px;
+}
+
+
+/* For all of the images on the page */
+.my-works-wallaru-image,
+.my-works-wallaru-art-large,
+.my-works-wallaru-art-medium,
+.my-works-wallaru-art-small,
+.my-works-wallaru-news-image,
+.my-works-wallaru-mobile-image,
+.my-works-pirate-video-background,
+.my-works-pirate-mobile {
+	background-repeat: no-repeat;
+	background-position: center;
+	text-align: center;
+	width: 90%;
 }
 
 .my-works-wallaru-image {
-    background-image: url(../images/900w-Background.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    text-align: center;
-    margin: 1rem;
-    height: 13rem;
-    width: 90%;
+	background-image: url(../images/280w-Background.png);
+	margin: 1rem;
+	height: 5rem;
 }
 
-.my-works-wallaru-description {
-    text-align: center;
-    width: 90%;
-    margin: 1rem;
-    max-width: 63rem;
-    font-size: 1.5rem;
+.my-works-wallaru-art-large {
+	background-image: url(../images/280w-LargeBackground.png);
+	margin: auto;
+	height: 13rem;
+}
+
+.my-works-wallaru-art-medium {
+	background-image: url(../images/270w-MediumBackground.png);
+	margin: auto;
+	height: 21rem;
+}
+
+.my-works-wallaru-art-small {
+	background-image: url(../images/260w-MobileBackground.png);
+	margin: auto;
+	height: 33rem;
+}
+
+.my-works-wallaru-news-image {
+	background-image: url(../images/280w-NewsBackground.png);
+	margin: auto;
+	height: 13rem;
+}
+
+.my-works-wallaru-mobile-image {
+	background-image: url(../images/280w-HamburgerMenu.png);
+	margin: auto;
+	height: 18rem;
+}
+
+.my-works-pirate-video-background {
+	background-image: url(../images/280w-PirateVideoBackground.PNG);
+	margin: auto;
+	height: 10rem;
+}
+
+.my-works-pirate-mobile {
+	background-image: url(../images/530h-PirateBackgroundMobile.PNG);
+	margin: auto;
+	height: 29rem;
+}
+
+/* For all of the text descriptions on the page */
+.my-works-wallaru-description,
+.my-works-wallaru-art-description,
+.my-works-wallaru-news-description,
+.my-works-wallaru-mobile-description,
+.my-works-pirate-video-background-description,
+.my-works-pirate-mobile-description {
+	text-align: center;
+	width: 90%;
+	margin: 1rem auto;
+	max-width: 63rem;
+	font-size: 1.5rem;
+	padding-bottom: 1rem;
+	border-bottom: 5px dotted #f0e6ef;
+}
+
+.my-works-pirate-mobile-description {
+	border-bottom: 0px;
 }
 
 /* For tablet view */
 @media screen and (max-width: 68rem) and (min-width: 40rem) {
-    .my-works-wallaru-image {
-        background-image: url(../images/900w-Background.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        text-align: center;
-        margin: 1rem;
-        height: 13rem;
-        width: 90%;
-    }
+	.my-works-wallaru-image {
+		background-image: url(../images/630w-Background.png);
+		margin: 1rem;
+		height: 13rem;
+	}
 
+	.my-works-wallaru-art-large {
+		background-image: url(../images/630w-LargeBackground.png);
+		margin: auto;
+		height: 30rem;
+	}
+
+	.my-works-wallaru-art-medium {
+		background-image: url(../images/620w-MediumBackground.png);
+		margin: auto;
+		height: 47rem;
+	}
+
+	.my-works-wallaru-art-small {
+		background-image: url(../images/740h-MobileBackground.png);
+		margin: auto;
+		height: 47rem;
+	}
+
+	.my-works-wallaru-news-image {
+		background-image: url(../images/630w-NewsBackground.png);
+		margin: auto;
+		height: 30rem;
+	}
+
+	.my-works-wallaru-mobile-image {
+		background-image: url(../images/605w-HamburgerMenu.PNG);
+		margin: auto;
+		height: 39rem;
+	}
+
+	.my-works-pirate-video-background {
+		background-image: url(../images/630w-PirateVideoBackground.PNG);
+		margin: auto;
+		height: 22rem;
+	}
+
+	.my-works-pirate-mobile {
+		background-image: url(../images/875h-PirateBackgroundMobile.PNG);
+		margin: auto;
+		height: 47rem;
+	}
 }
 
 /* for desktop view */
 @media (min-width: 68rem) {
-    .my-works-wallaru-image {
-        background-image: url(../images/900w-Background.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        text-align: center;
-        margin: 1rem;
-        height: 13rem;
-        width: 90%;
-    }
+	.my-works-wallaru-image {
+		background-image: url(../images/900w-Background.png);
+		margin: 1rem;
+		height: 13rem;
+	}
+
+	.my-works-wallaru-art-large {
+		background-image: url(../images/890w-LargeBackground.png);
+		margin: auto;
+		height: 41rem;
+	}
+
+	.my-works-wallaru-art-medium {
+		background-image: url(../images/714w-MediumBackground.png);
+		margin: auto;
+		height: 55rem;
+	}
+
+	.my-works-wallaru-art-small {
+		background-image: url(../images/740h-MobileBackground.png);
+		margin: auto;
+		height: 46rem;
+	}
+
+	.my-works-wallaru-news-image {
+		background-image: url(../images/900w-NewsBackground.png);
+		margin: auto;
+		height: 41rem;
+	}
+
+	.my-works-wallaru-mobile-image {
+		background-image: url(../images/605w-HamburgerMenu.PNG);
+		margin: auto;
+		height: 39rem;
+	}
+
+	.my-works-pirate-video-background {
+		background-image: url(../images/900w-PirateVideoBackground.PNG);
+		margin: auto;
+		height: 31rem;
+	}
+
+	.my-works-pirate-mobile {
+		background-image: url(../images/875h-PirateBackgroundMobile.PNG);
+		margin: auto;
+		height: 46rem;
+	}
 }
