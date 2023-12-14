@@ -121,7 +121,7 @@ body {
 .mobile-nav__item--cta button:active {
 	color: black;
 	background: white;
-	border: none;
+	border: white 2px solid;
 }
 
 .mobile-nav {
