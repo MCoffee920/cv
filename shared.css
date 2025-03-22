@@ -44,6 +44,27 @@ body {
 	background: rgba(0, 0, 0, 0.7);
 }
 
+.button {
+	/* display: inline-block; */
+	text-decoration: none;
+	padding: 10px 20px;
+	border: 3px solid #6b465b;
+	border-radius: 10px;
+
+}
+
+.button:hover {
+	animation: pulsate 1s ease-in-out;
+}
+
+@keyframes pulsate {
+	0% {
+		box-shadow:
+			0 0 25px #ffd8ef,
+			0 0 50px #60515a;
+	}
+}
+
 .main-header {
 	width: 100%;
 	position: sticky;
@@ -100,8 +121,8 @@ body {
 
 .main-nav__item a:hover,
 .main-nav__item a:active {
-	color: white;
-	border-bottom: 5px solid white;
+/*	color: white;
+	border-bottom: 5px solid white; */
 }
 
 .main-nav__item--cta button,
